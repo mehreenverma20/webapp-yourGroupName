@@ -18,7 +18,11 @@ pipeline {
                 }
             }     
         }
-
+        
+ stage('deploy') { 
+             steps {
+                 sh "mvn package"
+             }
      
 
         stage('Build Docker image'){
